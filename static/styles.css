@@ -1,0 +1,680 @@
+/* EV Charging Industry Analysis Report Styles */
+
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #4ECDC4;
+    --accent-color: #FF6B6B;
+    --text-color: #333333;
+    --bg-color: #FFFFFF;
+    --light-bg: #F8F9FA;
+    --border-color: #E9ECEF;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.report-header {
+    background: var(--gradient);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.report-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.report-header h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.header-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.header-meta p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Section Styles */
+section {
+    background: var(--bg-color);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+section h3 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    margin: 20px 0 15px 0;
+    font-weight: 600;
+}
+
+/* Executive Summary */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+.summary-card h3 {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.summary-card .metric {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.summary-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.key-findings {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.key-findings ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-findings li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.key-findings li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Industry Overview */
+.overview-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.market-trends, .growth-drivers, .challenges {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.market-trends {
+    border-left: 4px solid var(--primary-color);
+}
+
+.growth-drivers {
+    border-left: 4px solid var(--secondary-color);
+}
+
+.challenges {
+    border-left: 4px solid var(--accent-color);
+}
+
+.market-projection {
+    margin-top: 30px;
+}
+
+/* Chart Containers */
+canvas {
+    max-width: 100%;
+    height: auto !important;
+    margin: 20px 0;
+}
+
+/* Competitive Analysis */
+.competitive-matrix {
+    margin: 30px 0;
+}
+
+.analysis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.analysis-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.analysis-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.analysis-table tbody tr:hover {
+    background: var(--light-bg);
+}
+
+.analysis-table td:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Porter's Five Forces */
+.forces-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.force-card {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.force-card:hover {
+    transform: translateY(-5px);
+}
+
+.force-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.force-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.force-assessment {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(46, 139, 87, 0.1);
+    border-radius: 5px;
+}
+
+.force-factors {
+    list-style: none;
+    padding: 0;
+}
+
+.force-factors li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.force-factors li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.overall-assessment {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* SWOT Analysis */
+.swot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.swot-quadrant {
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+
+.swot-quadrant.strengths {
+    background: rgba(46, 139, 87, 0.05);
+    border-left-color: var(--primary-color);
+}
+
+.swot-quadrant.weaknesses {
+    background: rgba(255, 107, 107, 0.05);
+    border-left-color: var(--accent-color);
+}
+
+.swot-quadrant.opportunities {
+    background: rgba(78, 205, 196, 0.05);
+    border-left-color: var(--secondary-color);
+}
+
+.swot-quadrant.threats {
+    background: rgba(255, 165, 0, 0.05);
+    border-left-color: orange;
+}
+
+.swot-quadrant h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.swot-quadrant ul {
+    list-style: none;
+    padding: 0;
+}
+
+.swot-quadrant li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.swot-quadrant li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.strengths li:before { color: var(--primary-color); }
+.weaknesses li:before { color: var(--accent-color); }
+.opportunities li:before { color: var(--secondary-color); }
+.threats li:before { color: orange; }
+
+.strategic-options {
+    margin-top: 30px;
+}
+
+.strategies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.strategy-card {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.strategy-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Market Sizing */
+.tam-sam-som {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.market-tier {
+    text-align: center;
+    padding: 20px;
+}
+
+.market-tier h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.market-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.market-tier p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Trends Analysis */
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.trend-category {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.trend-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.outlook {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.outlook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.outlook-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.outlook-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.outlook-item p {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Recommendations */
+.recommendations-content {
+    margin: 30px 0;
+}
+
+.recommendation-tier {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+}
+
+.recommendation-tier:nth-child(1) {
+    border-left-color: var(--accent-color);
+}
+
+.recommendation-tier:nth-child(2) {
+    border-left-color: var(--secondary-color);
+}
+
+.recommendation-tier:nth-child(3) {
+    border-left-color: var(--primary-color);
+}
+
+.recommendation-tier h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.success-metrics {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Footer */
+.report-footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .report-header {
+        padding: 30px 20px;
+    }
+    
+    .report-header h1 {
+        font-size: 2rem;
+    }
+    
+    .report-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .header-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .swot-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .forces-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trends-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .strategies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tam-sam-som {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .analysis-table {
+        font-size: 0.8rem;
+    }
+    
+    .analysis-table th,
+    .analysis-table td {
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .report-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .report-header h2 {
+        font-size: 1rem;
+    }
+    
+    .summary-card .metric {
+        font-size: 1.8rem;
+    }
+    
+    .market-value {
+        font-size: 2rem;
+    }
+    
+    .force-score {
+        font-size: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .report-header {
+        background: none !important;
+        color: black !important;
+        box-shadow: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .force-card {
+        page-break-inside: avoid;
+    }
+    
+    canvas {
+        display: none;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}
